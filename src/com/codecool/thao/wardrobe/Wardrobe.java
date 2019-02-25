@@ -31,7 +31,6 @@ public class Wardrobe {
     /**
      * Clothes can be taken out of the wardrobe by their unique identifier.
      */
-
     public Cloth takeOutCloth(int id) {
         Cloth takeOutCloth = new Cloth();
         for (Hanger hanger : hangers) {
