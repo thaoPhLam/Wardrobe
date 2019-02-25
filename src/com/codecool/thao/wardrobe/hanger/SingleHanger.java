@@ -1,5 +1,7 @@
 package com.codecool.thao.wardrobe.hanger;
 
-public class SingleHanger {
-
+public class SingleHanger extends Hanger {
+    public SingleHanger() {
+        this.limit = 1;
+    }
 }
