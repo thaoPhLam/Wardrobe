@@ -13,14 +13,16 @@ public class SingleHanger extends Hanger {
     @Override
     public void putOntoCloth(Cloth cloth) {
         if (!hasCloth()) {
-            cloths.add(cloth);
-            System.out.println(
-                    getClass().getSimpleName()
-                            + " have a "
-                            + cloth.getClothType()
-            );
-            this.hasCloth = true;
-            this.cloth = cloth;
+            if (cloth.getClothType().getClothValue() == 1) {
+                cloths.add(cloth);
+                System.out.println(
+                        getClass().getSimpleName()
+                                + " have a "
+                                + cloth.getClothType()
+                );
+                this.hasCloth = true;
+                this.cloth = cloth;
+            }
         } else {
             System.out.println(
                     getClass().getSimpleName()

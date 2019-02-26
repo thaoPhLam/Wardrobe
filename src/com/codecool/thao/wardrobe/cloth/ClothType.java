@@ -15,4 +15,8 @@ public enum ClothType {
     ClothType(int clothValue) {
         this.clothValue = clothValue;
     }
+
+    public int getClothValue() {
+        return clothValue;
+    }
 }

@@ -18,6 +18,7 @@ public class Main {
         Hanger singleHanger = new SingleHanger();
         singleHanger.putOntoCloth(blouse);
         singleHanger.putOntoCloth(shirt);
+        //singleHanger.putOntoCloth(skirt);
 
         Hanger doubleHanger = new DoubleHanger();
         doubleHanger.putOntoCloth(jeans);
