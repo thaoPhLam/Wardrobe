@@ -1,7 +1,9 @@
 package com.codecool.thao.wardrobe;
 
 import com.codecool.thao.wardrobe.cloth.Cloth;
+import com.codecool.thao.wardrobe.hanger.DoubleHanger;
 import com.codecool.thao.wardrobe.hanger.Hanger;
+import com.codecool.thao.wardrobe.hanger.SingleHanger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,8 +37,13 @@ public class Wardrobe {
     public Cloth takeOutCloth(int id) {
         Cloth takeOutCloth = new Cloth();
         for (Hanger hanger : hangers) {
-            for (Cloth cloth : hanger.getCloths()) {
-                if (cloth.getId() == id) {
+            if (hanger instanceof SingleHanger) {
+                if (hanger.getUpperCloth().getId() == id) {
+                    takeOutCloth = hanger.takeOneClothingOff(id);
+                }
+            } else if (hanger instanceof DoubleHanger) {
+                if (hanger.getUpperCloth().getId() == id
+                        || ((DoubleHanger) hanger).getBottomCloth().getId() == id) {
                     takeOutCloth = hanger.takeOneClothingOff(id);
                 }
             }
