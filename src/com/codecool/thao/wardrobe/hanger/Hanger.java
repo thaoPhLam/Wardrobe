@@ -15,13 +15,17 @@ public abstract class Hanger {
         return takeOutCloth;
     }
 
+    public Cloth getUpperCloth() {
+        return upperCloth;
+    }
+
     public abstract List<Cloth> takeAllClothingOff();
 
     public abstract void putOntoCloth(Cloth cloth);
 
     @Override
     public String toString() {
-        return "Hanger{" +
+        return getClass().getSimpleName() + " {" +
                 "upperCloth=" + upperCloth +
                 '}';
     }
