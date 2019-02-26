@@ -22,7 +22,10 @@ public class Main {
 
         Hanger doubleHanger = new DoubleHanger();
         doubleHanger.putOntoCloth(jeans);
+        doubleHanger.putOntoCloth(skirt);
+
         doubleHanger.putOntoCloth(shirt);
+        doubleHanger.putOntoCloth(blouse);
 
         wardrobe.hangHanger(singleHanger);
         wardrobe.hangHanger(doubleHanger);
