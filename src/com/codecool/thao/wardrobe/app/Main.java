@@ -12,18 +12,21 @@ public class Main {
         Wardrobe wardrobe = new Wardrobe();
         Cloth blouse = new Cloth(ClothType.BLOUSE);
         Cloth jeans = new Cloth(ClothType.JEANS);
+        Cloth shirt = new Cloth(ClothType.SHIRT);
+        Cloth skirt = new Cloth(ClothType.SKIRT);
 
         Hanger singleHanger = new SingleHanger();
         singleHanger.putOntoCloth(blouse);
 
         Hanger doubleHanger = new DoubleHanger();
         doubleHanger.putOntoCloth(jeans);
+        doubleHanger.putOntoCloth(shirt);
 
         wardrobe.hangHanger(singleHanger);
         wardrobe.hangHanger(doubleHanger);
 
         wardrobe.isTherePlaceFor();
-        wardrobe.takeOutCloth(1);
+        System.out.println("I'm taking this out: " + wardrobe.takeOutCloth(3));
         wardrobe.printOutHangers();
 
     }

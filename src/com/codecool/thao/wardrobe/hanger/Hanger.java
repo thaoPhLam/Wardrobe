@@ -19,8 +19,8 @@ public abstract class Hanger {
         return hasCloth;
     }
 
-    public Cloth getCloth() {
-        return cloth;
+    public List<Cloth> getCloths() {
+        return cloths;
     }
 
     /**

@@ -34,8 +34,10 @@ public class Wardrobe {
     public Cloth takeOutCloth(int id) {
         Cloth takeOutCloth = new Cloth();
         for (Hanger hanger : hangers) {
-            if (hanger.getCloth().getId() == id) {
-                takeOutCloth = hanger.takeOneClothingOff(id);
+            for (Cloth cloth : hanger.getCloths()) {
+                if (cloth.getId() == id) {
+                    takeOutCloth = hanger.takeOneClothingOff(id);
+                }
             }
         }
         return takeOutCloth;
