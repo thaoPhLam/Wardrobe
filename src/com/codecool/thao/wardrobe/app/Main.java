@@ -32,11 +32,11 @@ public class Main {
         wardrobe.hangHanger(doubleHanger);
 
         wardrobe.isTherePlaceFor();
-        wardrobe.printOutHangers();
+        //wardrobe.printOutHangers();
 
         System.out.println("I'm taking this out: " + wardrobe.takeOutCloth(3));
-        System.out.println("I'm taking ALL out: " + doubleHanger.takeAllClothingOff());
-        System.out.println("I'm taking ALL out: " + singleHanger.takeAllClothingOff());
+        //System.out.println("I'm taking ALL out: " + doubleHanger.takeAllClothingOff());
+        //System.out.println("I'm taking ALL out: " + singleHanger.takeAllClothingOff());
 
     }
 }
