@@ -18,14 +18,15 @@ public class Main {
         Hanger singleHanger = new SingleHanger();
         singleHanger.putOntoCloth(blouse);
         singleHanger.putOntoCloth(shirt);
-        //singleHanger.putOntoCloth(skirt);
+        singleHanger.putOntoCloth(skirt);  //TODO: print out: it's not a TOP
 
         Hanger doubleHanger = new DoubleHanger();
         doubleHanger.putOntoCloth(jeans);
-        doubleHanger.putOntoCloth(skirt);
+        //doubleHanger.putOntoCloth(skirt);
 
         doubleHanger.putOntoCloth(shirt);
         doubleHanger.putOntoCloth(blouse);
+        doubleHanger.putOntoCloth(skirt);  //TODO: reordering...
 
         wardrobe.hangHanger(singleHanger);
         wardrobe.hangHanger(doubleHanger);
