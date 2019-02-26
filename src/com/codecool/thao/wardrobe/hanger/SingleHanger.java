@@ -8,9 +8,18 @@ import java.util.List;
 
 public class SingleHanger extends Hanger {
     @Override
+    public Cloth takeOneClothingOff(int id) {
+        Cloth takeOutCloth = new Cloth();
+        if (this.upperCloth.getId() == id) {
+            takeOutCloth = this.upperCloth;
+        }
+        return takeOutCloth;
+    }
+
+    @Override
     public List<Cloth> takeAllClothingOff() {
         List<Cloth> allClothOnHanger = new ArrayList<>();
-        allClothOnHanger.add(upperCloth);
+        allClothOnHanger.add(this.upperCloth);
         return allClothOnHanger;
     }
 
@@ -18,7 +27,7 @@ public class SingleHanger extends Hanger {
     public void putOntoCloth(Cloth cloth) {
         if (cloth.getClothType().equals(ClothType.BLOUSE)
                 || cloth.getClothType().equals(ClothType.SHIRT)) {
-            upperCloth = cloth;
+            this.upperCloth = cloth;
         }
     }
 }

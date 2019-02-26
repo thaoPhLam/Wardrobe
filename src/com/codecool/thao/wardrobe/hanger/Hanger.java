@@ -5,15 +5,9 @@ import com.codecool.thao.wardrobe.cloth.Cloth;
 import java.util.List;
 
 public abstract class Hanger {
-    protected Cloth upperCloth;
+    protected Cloth upperCloth = new Cloth();
 
-    public Cloth takeOneClothingOff(int id) {
-        Cloth takeOutCloth = new Cloth();
-        if (upperCloth.getId() == id) {
-            takeOutCloth = upperCloth;
-        }
-        return takeOutCloth;
-    }
+    public abstract Cloth takeOneClothingOff(int id);
 
     public Cloth getUpperCloth() {
         return upperCloth;
