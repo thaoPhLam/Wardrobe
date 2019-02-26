@@ -25,12 +25,15 @@ public class DoubleHanger extends Hanger {
 
     @Override
     public void putOntoCloth(Cloth cloth) {
-        putOntoUpperCloth(cloth);
-        putOntoBottomCloth(cloth);
+        if (cloth.getClothType().getClothValue() == 1) {
+            putOntoUpperCloth(cloth);
+        } else if (cloth.getClothType().getClothValue() == 2) {
+            putOntoBottomCloth(cloth);
+        }
     }
 
     private void putOntoUpperCloth(Cloth cloth) {
-        if (cloth.getClothType().getClothValue() == 1) {
+        //if (cloth.getClothType().getClothValue() == 1) {
             if (!hasUpper()) {
                 upperCloths.add(cloth);
 
@@ -49,11 +52,11 @@ public class DoubleHanger extends Hanger {
             } else {
                 messageForAlreadyHaving(cloth);
             }
-        }
+        //}
     }
 
     private void putOntoBottomCloth(Cloth cloth) {
-        if (cloth.getClothType().getClothValue() == 2) {
+        //if (cloth.getClothType().getClothValue() == 2) {
             if (!hasBottom()) {
                 bottomCloths.add(cloth);
 
@@ -72,7 +75,7 @@ public class DoubleHanger extends Hanger {
             } else {
                 messageForAlreadyHaving(cloth);
             }
-        }
+        //}
     }
 
     private void messageForAlreadyHaving(Cloth cloth) {
