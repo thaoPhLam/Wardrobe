@@ -47,11 +47,14 @@ public abstract class Hanger {
     /**
      * Also, they allow pieces of clothing to be put onto them one-by-one.
      */
+    /*
     public void putOntoCloth(Cloth cloth) {
         cloths.add(cloth);
         hasCloth = true;
         System.out.println(getClass().getSimpleName() + ": I have cloth.");
     }
+    */
+    public abstract void putOntoCloth(Cloth cloth);
 
     @Override
     public String toString() {
