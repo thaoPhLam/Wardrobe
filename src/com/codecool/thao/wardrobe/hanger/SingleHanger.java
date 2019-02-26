@@ -28,6 +28,7 @@ public class SingleHanger extends Hanger {
                             + " already have a "
                             + this.cloth.getClothType()
             );
+            System.out.println();
         }
     }
 }
