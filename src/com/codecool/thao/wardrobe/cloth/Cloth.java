@@ -23,6 +23,10 @@ public class Cloth {
         this.id = COUNT++;
     }
 
+    public ClothType getClothType() {
+        return clothType;
+    }
+
     public int getId() {
         return id;
     }
