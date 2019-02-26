@@ -7,7 +7,6 @@ import java.util.List;
 
 public abstract class Hanger {
     protected boolean hasCloth;
-    protected int limit;
     protected Cloth cloth;
     protected List<Cloth> cloths = new ArrayList<>();
 
@@ -60,7 +59,6 @@ public abstract class Hanger {
     public String toString() {
         return getClass().getSimpleName() + " {" +
                 "hasCloth=" + hasCloth +
-                ", limit=" + limit +
                 ", cloths=" + cloths +
                 '}';
     }
