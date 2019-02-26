@@ -48,12 +48,11 @@ public class Wardrobe {
      * in there for a particular type of clothing.
      */
     public boolean isTherePlaceFor() {
-        if (hangers.size() <= LIMIT) {
-            hasPlace = true;
-            System.out.println("There's still some place.");
-        } else {
+        if (hangers.size() >= LIMIT) {
             hasPlace = false;
             System.out.println("There's no more place.");
+        } else {
+            System.out.println("There's still some place.");
         }
         return hasPlace;
     }
