@@ -1,4 +1,6 @@
 package com.codecool.thao.wardrobe.cloth;
 
-public class ClothPart {
+public enum ClothPart {
+    UPPER,
+    BOTTOM
 }

@@ -2,6 +2,7 @@ package com.codecool.thao.wardrobe.app;
 
 import com.codecool.thao.wardrobe.Wardrobe;
 import com.codecool.thao.wardrobe.cloth.Cloth;
+import com.codecool.thao.wardrobe.cloth.ClothPart;
 import com.codecool.thao.wardrobe.cloth.ClothType;
 import com.codecool.thao.wardrobe.hanger.DoubleHanger;
 import com.codecool.thao.wardrobe.hanger.Hanger;
@@ -10,10 +11,10 @@ import com.codecool.thao.wardrobe.hanger.SingleHanger;
 public class Main {
     public static void main(String[] args) {
         Wardrobe wardrobe = new Wardrobe();
-        Cloth blouse = new Cloth(ClothType.BLOUSE);
-        Cloth jeans = new Cloth(ClothType.JEANS);
-        Cloth shirt = new Cloth(ClothType.SHIRT);
-        Cloth skirt = new Cloth(ClothType.SKIRT);
+        Cloth blouse = new Cloth(ClothType.BLOUSE, ClothPart.UPPER);
+        Cloth jeans = new Cloth(ClothType.JEANS, ClothPart.BOTTOM);
+        Cloth shirt = new Cloth(ClothType.SHIRT, ClothPart.UPPER);
+        Cloth skirt = new Cloth(ClothType.SKIRT, ClothPart.BOTTOM);
 
         Hanger singleHanger = new SingleHanger();
         singleHanger.putOntoCloth(blouse);

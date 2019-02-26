@@ -12,19 +12,25 @@ public class Cloth {
     private int id;
     private static int COUNT = 1;
     private String brandName = "H&M";
-    private ClothType clothType = ClothType.BLOUSE;
+    private ClothType clothType;
+    private ClothPart clothPart;
 
     public Cloth() {
         this.id = COUNT++;
     }
 
-    public Cloth(ClothType clothType) {
+    public Cloth(ClothType clothType, ClothPart clothPart) {
         this.clothType = clothType;
+        this.clothPart = clothPart;
         this.id = COUNT++;
     }
 
     public ClothType getClothType() {
         return clothType;
+    }
+
+    public ClothPart getClothPart() {
+        return clothPart;
     }
 
     public int getId() {
@@ -35,8 +41,8 @@ public class Cloth {
     public String toString() {
         return "Cloth{" +
                 "id=" + id +
-                ", brandName='" + brandName + '\'' +
                 ", clothType=" + clothType +
+                ", clothPart=" + clothPart +
                 '}';
     }
 }
