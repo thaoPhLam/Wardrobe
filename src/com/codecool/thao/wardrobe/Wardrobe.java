@@ -24,6 +24,7 @@ public class Wardrobe {
 
         //if (hanger.hasCloth()) {
             hangers.add(hanger);
+            System.out.println(hanger);
         }
         //}
     }
