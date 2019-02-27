@@ -27,7 +27,29 @@ public class SingleHanger extends Hanger {
     public void putOntoCloth(Cloth cloth) {
         if (cloth.getClothType().equals(ClothType.BLOUSE)
                 || cloth.getClothType().equals(ClothType.SHIRT)) {
-            this.upperCloth = cloth;
+            if (upperCloth == null) {
+                this.upperCloth = cloth;
+            } else {
+                System.out.println(
+                        getClass().getSimpleName()
+                                + " can not put on "
+                                + cloth
+                                + " already has a "
+                                + this.upperCloth
+                );
+            }
+        } else {
+            System.out.println(
+                    cloth
+                    + " is not a TOP"
+            );
         }
+    }
+
+    @Override
+    public String toString() {
+        return "SingleHanger{" +
+                "upperCloth=" + upperCloth +
+                '}';
     }
 }

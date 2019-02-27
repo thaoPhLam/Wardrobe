@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DoubleHanger extends Hanger {
-    private Cloth bottomCloth = new Cloth();
+    private Cloth bottomCloth;
 
     public Cloth getBottomCloth() {
         return bottomCloth;
@@ -16,11 +16,28 @@ public class DoubleHanger extends Hanger {
     @Override
     public Cloth takeOneClothingOff(int id) {
         Cloth takeOutCloth = new Cloth();
-        if (this.upperCloth.getId() == id) {
-            takeOutCloth = this.upperCloth;
-        } else if (this.bottomCloth.getId() == id) {
-            takeOutCloth = this.bottomCloth;
+
+        List<Cloth> allCloth = new ArrayList<>();
+
+        allCloth.add(upperCloth);
+        allCloth.add(bottomCloth);
+
+        for (Cloth cloth : allCloth) {
+            if (cloth != null) {
+                if (cloth.getId() == id) {
+                    takeOutCloth = cloth;
+                }
+            }
         }
+/*
+        if (this.upperCloth != null || this.bottomCloth != null) {
+            if (this.upperCloth.getId() == id) {
+                takeOutCloth = this.upperCloth;
+            } else if (this.bottomCloth.getId() == id) {
+                takeOutCloth = this.bottomCloth;
+            }
+        }
+*/
         return takeOutCloth;
     }
 
@@ -36,10 +53,38 @@ public class DoubleHanger extends Hanger {
     public void putOntoCloth(Cloth cloth) {
         if (cloth.getClothType().equals(ClothType.BLOUSE)
                 || cloth.getClothType().equals(ClothType.SHIRT)) {
-            this.upperCloth = cloth;
+            if (upperCloth == null) {
+                this.upperCloth = cloth;
+            } else {
+                System.out.println(
+                        getClass().getSimpleName()
+                                + " can not put on "
+                                + cloth
+                                + " already has a "
+                                + this.upperCloth
+                );
+            }
         } else if (cloth.getClothType().equals(ClothType.JEANS)
                 || cloth.getClothType().equals(ClothType.SKIRT)) {
-            this.bottomCloth = cloth;
+            if (bottomCloth == null) {
+                this.bottomCloth = cloth;
+            } else {
+                System.out.println(
+                        getClass().getSimpleName()
+                                + " can not put on "
+                                + cloth
+                                + " already has a "
+                                + this.bottomCloth
+                );
+            }
         }
+    }
+
+    @Override
+    public String toString() {
+        return "DoubleHanger{" +
+                "upperCloth=" + upperCloth +
+                ", bottomCloth=" + bottomCloth +
+                '}';
     }
 }
