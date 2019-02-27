@@ -22,11 +22,9 @@ public class Wardrobe {
     public void hangHanger(Hanger hanger) {
         if (hangers.size() < LIMIT) {
 
-        //if (hanger.hasCloth()) {
             hangers.add(hanger);
             System.out.println(hanger);
         }
-        //}
     }
 
     /**
