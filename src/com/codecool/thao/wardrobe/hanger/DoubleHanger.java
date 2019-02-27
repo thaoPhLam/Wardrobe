@@ -29,15 +29,6 @@ public class DoubleHanger extends Hanger {
                 }
             }
         }
-/*
-        if (this.upperCloth != null || this.bottomCloth != null) {
-            if (this.upperCloth.getId() == id) {
-                takeOutCloth = this.upperCloth;
-            } else if (this.bottomCloth.getId() == id) {
-                takeOutCloth = this.bottomCloth;
-            }
-        }
-*/
         return takeOutCloth;
     }
 
