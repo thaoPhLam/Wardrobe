@@ -13,18 +13,24 @@ public class Cloth {
     private static int COUNT = 1;
     private String brandName = "H&M";
     private ClothType clothType;
+    private ClothPart clothPart;
 
     public Cloth() {
         this.id = COUNT++;
     }
 
-    public Cloth(ClothType clothType) {
+    public Cloth(ClothType clothType, ClothPart clothPart) {
         this.clothType = clothType;
+        this.clothPart = clothPart;
         this.id = COUNT++;
     }
 
     public ClothType getClothType() {
         return clothType;
+    }
+
+    public ClothPart getClothPart() {
+        return clothPart;
     }
 
     public int getId() {

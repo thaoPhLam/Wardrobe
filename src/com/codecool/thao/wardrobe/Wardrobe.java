@@ -1,7 +1,7 @@
 package com.codecool.thao.wardrobe;
 
 import com.codecool.thao.wardrobe.cloth.Cloth;
-import com.codecool.thao.wardrobe.cloth.ClothType;
+import com.codecool.thao.wardrobe.cloth.ClothPart;
 import com.codecool.thao.wardrobe.hanger.DoubleHanger;
 import com.codecool.thao.wardrobe.hanger.Hanger;
 import com.codecool.thao.wardrobe.hanger.SingleHanger;
@@ -59,8 +59,7 @@ public class Wardrobe {
     }
 
     private void checkPlaceOnSingleHanger(Cloth cloth, Hanger hanger) {
-        if (cloth.getClothType().equals(ClothType.BLOUSE)
-                || cloth.getClothType().equals(ClothType.SHIRT)) {
+        if (cloth.getClothPart().equals(ClothPart.UPPER)) {
             if (hanger.getUpperCloth() == null) {
                 System.out.println(
                         "There is place for "
@@ -73,8 +72,7 @@ public class Wardrobe {
     }
 
     private void checkPlaceOnDoubleHanger(Cloth cloth, Hanger hanger) {
-        if (cloth.getClothType().equals(ClothType.BLOUSE)
-                || cloth.getClothType().equals(ClothType.SHIRT)) {
+        if (cloth.getClothPart().equals(ClothPart.UPPER)) {
             if (hanger.getUpperCloth() == null) {
                 System.out.println(
                         "There is place for "
@@ -83,8 +81,7 @@ public class Wardrobe {
                                 + hanger
                 );
             }
-        } else if (cloth.getClothType().equals(ClothType.JEANS)
-                || cloth.getClothType().equals(ClothType.SKIRT)) {
+        } else if (cloth.getClothPart().equals(ClothPart.BOTTOM)) {
             if (((DoubleHanger) hanger).getBottomCloth() == null) {
                 System.out.println(
                         "There is place for "
