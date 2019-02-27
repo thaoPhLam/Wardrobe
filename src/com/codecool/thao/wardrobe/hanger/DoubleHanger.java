@@ -13,6 +13,7 @@ public class DoubleHanger extends Hanger {
         return bottomCloth;
     }
 
+    //TODO: for takeouts -> set the variable back to null
     @Override
     public Cloth takeOneClothingOff(int id) {
         Cloth takeOutCloth = new Cloth();

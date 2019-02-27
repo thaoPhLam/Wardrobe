@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SingleHanger extends Hanger {
+
+    //TODO: for takeouts -> set the variable back to null
     @Override
     public Cloth takeOneClothingOff(int id) {
         Cloth takeOutCloth = new Cloth();

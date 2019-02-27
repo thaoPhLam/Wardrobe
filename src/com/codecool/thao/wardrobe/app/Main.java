@@ -38,7 +38,7 @@ public class Main {
         Cloth shirt2 = new Cloth(ClothType.SHIRT);
         wardrobe.isTherePlaceFor(shirt2);
 
-        System.out.println("I'm taking this out: " + wardrobe.takeOutCloth(2)); // TODO:
+        System.out.println("I'm taking this out: " + wardrobe.takeOutCloth(2)); // TODO: figure out why id is something else
         System.out.println("I'm taking ALL out: " + doubleHanger.takeAllClothingOff());
         System.out.println("I'm taking ALL out: " + singleHanger.takeAllClothingOff());
 
