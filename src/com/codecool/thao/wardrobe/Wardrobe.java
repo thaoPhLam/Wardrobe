@@ -45,7 +45,6 @@ public class Wardrobe {
      * Users of the wardrobe can test whether there’s still place
      * in there for a particular type of clothing.
      */
-    //TODO: add enum ClothPart {UPPER, BOTTOM}
     public void isTherePlaceFor(Cloth cloth) {
         for (Hanger hanger : hangers) {
             if (hanger instanceof SingleHanger) {
