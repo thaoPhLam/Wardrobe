@@ -7,6 +7,10 @@ import java.util.List;
 public abstract class Hanger {
     protected Cloth upperCloth;
 
+    public Cloth getUpperCloth() {
+        return upperCloth;
+    }
+
     public abstract Cloth takeOneClothingOff(int id);
 
     public abstract List<Cloth> takeAllClothingOff();

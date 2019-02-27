@@ -35,7 +35,10 @@ public class Main {
 
         wardrobe.isTherePlaceForHanger();
 
-        System.out.println("I'm taking this out: " + wardrobe.takeOutCloth(2));
+        Cloth shirt2 = new Cloth(ClothType.SHIRT);
+        wardrobe.isTherePlaceFor(shirt2);
+
+        System.out.println("I'm taking this out: " + wardrobe.takeOutCloth(2)); // TODO:
         System.out.println("I'm taking ALL out: " + doubleHanger.takeAllClothingOff());
         System.out.println("I'm taking ALL out: " + singleHanger.takeAllClothingOff());
 
