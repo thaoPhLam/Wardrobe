@@ -42,7 +42,7 @@ public class Wardrobe {
      * Users of the wardrobe can test whether there’s still place
      * in there for a particular type of clothing.
      */
-    public void isTherePlaceFor() {
+    public void isTherePlaceForHanger() {
         if (hangers.size() >= LIMIT) {
             noMoreSpace();
         } else {
