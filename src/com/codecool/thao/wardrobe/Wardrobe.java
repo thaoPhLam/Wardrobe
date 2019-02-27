@@ -53,11 +53,4 @@ public class Wardrobe {
         }
         return hasPlace;
     }
-
-    public void printOutHangers() {
-        for (Hanger hanger : hangers) {
-            hanger.takeAllClothingOff();
-            System.out.println(hanger);
-        }
-    }
 }
