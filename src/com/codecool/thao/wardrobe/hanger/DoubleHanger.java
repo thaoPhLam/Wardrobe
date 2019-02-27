@@ -9,10 +9,6 @@ import java.util.List;
 public class DoubleHanger extends Hanger {
     private Cloth bottomCloth;
 
-    public Cloth getBottomCloth() {
-        return bottomCloth;
-    }
-
     @Override
     public Cloth takeOneClothingOff(int id) {
         Cloth takeOutCloth = new Cloth();

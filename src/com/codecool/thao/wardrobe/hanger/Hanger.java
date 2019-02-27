@@ -9,10 +9,6 @@ public abstract class Hanger {
 
     public abstract Cloth takeOneClothingOff(int id);
 
-    public Cloth getUpperCloth() {
-        return upperCloth;
-    }
-
     public abstract List<Cloth> takeAllClothingOff();
 
     public abstract void putOntoCloth(Cloth cloth);
