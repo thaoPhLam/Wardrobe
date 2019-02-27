@@ -40,8 +40,10 @@ public class SingleHanger extends Hanger {
             }
         } else {
             System.out.println(
-                    cloth
-                    + " is not a TOP"
+                    getClass().getSimpleName()
+                    + " can not put on "
+                    + cloth
+                    + " because it is not a TOP"
             );
         }
     }
