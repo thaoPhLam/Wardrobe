@@ -31,6 +31,7 @@ public class Main {
 
         wardrobe.hangHanger(singleHanger);
         wardrobe.hangHanger(doubleHanger);
+        wardrobe.hangHanger(new DoubleHanger());
 
         wardrobe.isTherePlaceFor();
 

@@ -11,7 +11,7 @@ public class Wardrobe {
      * The wardrobe can accommodate only a certain number of hangers
      * (the actual limit can vary between different wardrobes).
      */
-    private static final int LIMIT = 50;
+    private static final int LIMIT = 3;
     private List<Hanger> hangers = new ArrayList<>();
     private boolean hasPlace = true;
 
@@ -42,13 +42,16 @@ public class Wardrobe {
      * Users of the wardrobe can test whether there’s still place
      * in there for a particular type of clothing.
      */
-    public boolean isTherePlaceFor() {
+    public void isTherePlaceFor() {
         if (hangers.size() >= LIMIT) {
-            hasPlace = false;
-            System.out.println("There's no more place.");
+            noMoreSpace();
         } else {
             System.out.println("There's still some place.");
         }
-        return hasPlace;
+    }
+
+    private void noMoreSpace() {
+        hasPlace = false;
+        System.out.println("There's no more place.");
     }
 }
