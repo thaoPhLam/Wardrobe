@@ -12,23 +12,17 @@ public class Main {
     public static void main(String[] args) {
         Wardrobe wardrobe = new Wardrobe();
 
-        Cloth blouse = new Cloth(ClothType.BLOUSE, ClothPart.UPPER);
-        Cloth jeans = new Cloth(ClothType.JEANS, ClothPart.BOTTOM);
-        Cloth shirt = new Cloth(ClothType.SHIRT, ClothPart.UPPER);
-        Cloth skirt = new Cloth(ClothType.SKIRT, ClothPart.BOTTOM);
-
         Hanger singleHanger = new SingleHanger();
-        singleHanger.putOntoCloth(blouse);
-        singleHanger.putOntoCloth(shirt);
-        singleHanger.putOntoCloth(skirt);
+        singleHanger.putOntoCloth(new Cloth(ClothType.BLOUSE, ClothPart.UPPER));
+        singleHanger.putOntoCloth(new Cloth(ClothType.SHIRT, ClothPart.UPPER));
+        singleHanger.putOntoCloth(new Cloth(ClothType.SKIRT, ClothPart.BOTTOM));
 
         Hanger doubleHanger = new DoubleHanger();
-        doubleHanger.putOntoCloth(jeans);
-        //doubleHanger.putOntoCloth(skirt);
-
-        doubleHanger.putOntoCloth(shirt);
-        doubleHanger.putOntoCloth(blouse);
-        doubleHanger.putOntoCloth(skirt);
+        doubleHanger.putOntoCloth(new Cloth(ClothType.JEANS, ClothPart.BOTTOM));
+        //doubleHanger.putOntoCloth(new Cloth(ClothType.SKIRT, ClothPart.BOTTOM));
+        doubleHanger.putOntoCloth(new Cloth(ClothType.SHIRT, ClothPart.UPPER));
+        doubleHanger.putOntoCloth(new Cloth(ClothType.BLOUSE, ClothPart.UPPER));
+        doubleHanger.putOntoCloth(new Cloth(ClothType.SKIRT, ClothPart.BOTTOM));
 
         wardrobe.hangHanger(singleHanger);
         wardrobe.hangHanger(doubleHanger);
@@ -36,12 +30,12 @@ public class Main {
 
         wardrobe.isTherePlaceForHanger();
 
-        Cloth shirt2 = new Cloth(ClothType.SHIRT, ClothPart.UPPER);
-        wardrobe.isTherePlaceFor(shirt2);
+        wardrobe.isTherePlaceFor(new Cloth(ClothType.SHIRT, ClothPart.UPPER));
 
-        System.out.println("I'm taking this out: " + wardrobe.takeOutCloth(2)); // TODO: figure out why id is something else
+        System.out.println("I'm taking this out: " + wardrobe.takeOutCloth(1)); // TODO: figure out why id is something else
         System.out.println("I'm taking ALL out: " + doubleHanger.takeAllClothingOff());
         System.out.println("I'm taking ALL out: " + singleHanger.takeAllClothingOff());
 
+        // nincs constructor
     }
 }
